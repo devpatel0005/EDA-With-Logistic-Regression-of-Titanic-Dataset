@@ -1,61 +1,50 @@
 # EDA-With-Logistic-Regression-of-Titanic-Dataset
 
-This repository contains a Jupyter notebook that performs Exploratory Data Analysis (EDA) and applies Logistic Regression on the Titanic dataset. The analysis includes data visualization, statistical calculations, and machine learning model implementation.
+# Complete Python (Part 2): EDA with Logistic Regression
 
-Table of Contents
-Introduction
-Dataset
-Exploratory Data Analysis (EDA)
-Scatter Plot of Sepal Dimensions
-Statistical Summary of Sepal Length
-Histogram of Sepal Length
-Box Plot of Petal Width
-Logistic Regression
-Results
-Conclusion
-Introduction
-This project aims to explore the Titanic dataset from Kaggle and apply Logistic Regression to predict the survival of passengers. The notebook contains various steps to preprocess the data, visualize relationships, and build a predictive model.
+## Overview
 
-Dataset
-The dataset used for this analysis is the Titanic dataset, which contains information about the passengers, including whether they survived the sinking of the Titanic.
+This Jupyter Notebook covers Exploratory Data Analysis (EDA) and Logistic Regression in Python. It provides a step-by-step guide to analyzing a dataset, visualizing patterns, and building a logistic regression model to make predictions.
 
-Exploratory Data Analysis (EDA)
-The EDA section includes several visualizations and statistical summaries to understand the dataset better.
+## Features
 
-Scatter Plot of Sepal Dimensions
-Using Pandas and Seaborn, a scatter plot is created to visualize the relationship between sepal length and sepal width, color-coded by species.
+- **Data Cleaning & Preprocessing**: Handling missing values, outlier detection, and feature selection.
+- **Exploratory Data Analysis (EDA)**: Visualizing data distributions, correlations, and key insights using libraries such as Pandas, Matplotlib, and Seaborn.
+- **Feature Engineering**: Transforming raw data into meaningful features for better model performance.
+- **Logistic Regression**: Implementing logistic regression using Scikit-Learn to classify data and evaluate model performance.
+- **Model Evaluation**: Assessing accuracy, precision, recall, and other performance metrics using confusion matrices and ROC curves.
 
-Python
-import seaborn as sns
-sns.scatterplot(x='sepal_length', y='sepal_width', hue='species', data=df)
-Statistical Summary of Sepal Length
-Using Pandas, the mean, median, and standard deviation of sepal length for each species are calculated.
+## Requirements
 
-Python
-df['sepal_length'].groupby(df['species']).agg(['mean', 'median', 'std'])
-Histogram of Sepal Length
-Using NumPy and Matplotlib, a histogram of sepal length for all species combined is created.
+Ensure you have the following Python libraries installed:
 
-Python
-import matplotlib.pyplot as plt
-plt.hist(df['sepal_length'])
-Box Plot of Petal Width
-Using Seaborn, a box plot is created to compare the distribution of petal width across different species.
+```bash
+pip install numpy pandas matplotlib seaborn scikit-learn
+```
 
-Python
-sns.boxplot(x='species', y='petal_width', data=df)
-Logistic Regression
-The logistic regression model is implemented to predict whether a passenger survived or not based on the features in the Titanic dataset.
+## Usage
 
-Data Loading and Preprocessing
-The Titanic dataset is loaded and necessary preprocessing steps are performed.
+1. Open the Jupyter Notebook:
 
-Python
-import pandas as pd
-train = pd.read_csv('titanic_train.csv')
-train.head()
-Results
-The results of the logistic regression model are evaluated to understand its performance in predicting the survival of passengers.
+   ```bash
+   jupyter notebook Complete_Python_(Part_2_EDA_with_Logistic_Regression).ipynb
+   ```
 
-Conclusion
-The notebook demonstrates the process of EDA and logistic regression implementation on the Titanic dataset. The visualizations and statistical summaries provide insights into the data, and the logistic regression model offers a predictive solution for the classification problem.
+2. Run the cells step by step to perform data analysis and build the logistic regression model.
+
+## Dataset
+
+The dataset used in this notebook should be placed in the working directory. Modify the data loading cell accordingly if needed.
+
+## Output
+
+- Graphical visualizations of data trends.
+- Logistic regression model with performance metrics.
+
+## Author
+
+\
+Feel free to contribute or reach out for any clarifications!
+
+Dev Patel
+
